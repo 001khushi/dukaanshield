@@ -1,0 +1,217 @@
+{
+  "sunita-homemade-millet-cookies-922": {
+    "business": "Sunita Homemade Millet Cookies",
+    "privacyShieldActive": true,
+    "privacyNote": "Personal mobile number (98765-43210) and home address (Flat 402, Kothrud, Pune) have been scrubbed from public display. Replace with a masked contact form via orders@sunitamilletcookies.in and a GoDaddy domain mailbox. Customers should never see your flat number or personal phone on any public listing.",
+    "tagline": "Baked with Millets, Made with Love — Goodness in Every Bite!",
+    "catalog": [
+      {
+        "item": "Ragi Choco Chip Cookies",
+        "quantity": "250g",
+        "price": "₹180",
+        "category": "Cookies"
+      },
+      {
+        "item": "Bajra Almond Biscuits",
+        "quantity": "250g",
+        "price": "₹200",
+        "category": "Biscuits"
+      },
+      {
+        "item": "Jowar Jeera Namkeen",
+        "quantity": "Standard Pack",
+        "price": "₹120",
+        "category": "Namkeen & Snacks"
+      },
+      {
+        "item": "Festive Gift Box (Assorted Millets Selection)",
+        "quantity": "Assorted",
+        "price": "₹450",
+        "category": "Gift Sets"
+      }
+    ],
+    "storefrontFeatures": [
+      "Mobile-friendly digital menu page with WhatsApp Order button (no personal number exposed — routes via masked business number)",
+      "Pre-order & pickup slot booking calendar so customers choose a safe, confirmed time window — no random doorbell visits",
+      "Festive season bundle builder — customers mix and match products to create custom gift boxes with live price preview"
+    ],
+    "trustBadges": [
+      "🌾 100% Natural Millet Ingredients — No Maida, No Preservatives",
+      "🏠 Homemade with Hygiene — Prepared in a Clean, Dedicated Kitchen Space",
+      "🎁 Festive-Ready Packaging — Eco-friendly boxes, Perfect for Gifting"
+    ],
+    "policies": {
+      "pickupHours": {
+        "days": "Tuesday - Sunday",
+        "hours": "11:00 AM - 6:00 PM",
+        "note": "Orders must be placed at least 24 hours in advance via the website contact form or masked WhatsApp business number. Pickup location shared only after order confirmation — your flat address is never displayed publicly. No walk-in orders accepted without prior booking. Monday is a kitchen rest and prep day — no pickups."
+      },
+      "paymentPolicy": "Advance payment via UPI (Google Pay / PhonePe / Paytm) required to confirm order. No cash on pickup to maintain contactless safety.",
+      "deliveryPolicy": "Local Kothrud & nearby Pune areas: Home delivery available for orders above ₹500 via trusted delivery partner. Delivery address shared securely only at dispatch."
+    },
+    "suggestedDomains": [
+      "sunitamilletcookies.in",
+      "sunitamilletcookies.shop"
+    ],
+    "publishedAt": "2026-11-16T16:50:25.004Z"
+  },
+  "muskan-homemade-millet-cookies-905": {
+    "business": "Muskan Homemade Millet Cookies",
+    "privacyShieldActive": true,
+    "privacyNote": "Personal mobile number (98765-43210) and home address (Flat 402, Kothrud, Pune) have been scrubbed from public display. All customer inquiries are routed through a masked GoDaddy domain mailbox at hello@muskan.shop. Exact location is shared only after order confirmation via secure DM.",
+    "tagline": "Baked with Millets, Made with Love — Every Bite Tells a Story 🌾",
+    "catalog": [
+      {
+        "item": "Ragi Choco Chip Cookies",
+        "quantity": "250g",
+        "price": "₹180",
+        "category": "Cookies"
+      },
+      {
+        "item": "Bajra Almond Biscuits",
+        "quantity": "250g",
+        "price": "₹200",
+        "category": "Biscuits"
+      },
+      {
+        "item": "Jowar Jeera Namkeen",
+        "quantity": "Standard Pack",
+        "price": "₹120",
+        "category": "Namkeen & Savoury"
+      },
+      {
+        "item": "Festive Gift Box (Assorted Millet Treats)",
+        "quantity": "Assorted",
+        "price": "₹450",
+        "category": "Gift Sets"
+      }
+    ],
+    "trustBadges": [
+      "🌾 100% Natural Millet Ingredients — No Maida, No Preservatives",
+      "🏠 Homemade with Hygiene — Prepared in a Clean, Dedicated Kitchen Space",
+      "📦 Freshness Guaranteed — Baked to Order Within 48 Hours of Confirmation"
+    ],
+    "storefrontFeatures": [
+      "📸 Visual Catalog Gallery — High-quality product photos with ingredient highlights and allergen info displayed per item",
+      "🛒 WhatsApp Order Button — One-tap ordering via masked business WhatsApp linked to hello@muskan.shop, keeping personal number private",
+      "⭐ Customer Review Wall — Verified buyer testimonials with star ratings displayed on storefront to build social trust"
+    ],
+    "policies": {
+      "pickupHours": {
+        "days": "Tuesday - Sunday",
+        "hours": "11:00 AM - 6:00 PM",
+        "note": "Pickup location (Kothrud area, Pune) is shared privately only after order is confirmed and payment is received. No walk-in without prior appointment. Home address is never displayed publicly. Contactless doorstep handoff available within 3 km radius on orders above ₹300."
+      },
+      "orderPolicy": "All orders require minimum 24-hour advance notice. Custom festive hampers require 48-hour lead time. Payment via UPI only (GPay/PhonePe/Paytm) before dispatch.",
+      "returnPolicy": "Fresh baked goods are non-returnable. In case of quality concern, photo evidence must be shared within 2 hours of delivery for resolution."
+    },
+    "suggestedDomains": [
+      "muskanmillets.in",
+      "muskanmillets.shop"
+    ],
+    "publishedAt": "2026-11-17T17:19:05.078Z"
+  },
+  "radha-homemade-millet-cookies-177": {
+    "business": "Radha Homemade Millet Cookies",
+    "privacyShieldActive": true,
+    "privacyNote": "Personal mobile number (98765-43210) and home address (Flat 402, Kothrud, Pune) have been scrubbed from public display. All customer contact is routed through a masked GoDaddy domain mailbox at orders@radhamillet.in. Pickup location shared privately only after order confirmation via email.",
+    "tagline": "Rooted in Tradition, Baked with Love — Every Millet Bite Tells a Story.",
+    "catalog": [
+      {
+        "item": "Ragi Choco Chip Cookies",
+        "quantity": "250g",
+        "price": "₹180",
+        "category": "Cookies"
+      },
+      {
+        "item": "Bajra Almond Biscuits",
+        "quantity": "250g",
+        "price": "₹200",
+        "category": "Biscuits"
+      },
+      {
+        "item": "Jowar Jeera Namkeen",
+        "quantity": "Standard Pack",
+        "price": "₹120",
+        "category": "Namkeen & Snacks"
+      },
+      {
+        "item": "Festive Gift Box (Assorted Millets Selection)",
+        "quantity": "Assorted",
+        "price": "₹450",
+        "category": "Gift Sets"
+      }
+    ],
+    "storefrontFeatures": [
+      "📦 Pre-Order System: Customers place orders 48 hours in advance via email, ensuring freshness and zero wastage on every batch.",
+      "🔒 Privacy-First Checkout: No personal address displayed publicly — exact pickup pin shared only via confirmed order email thread.",
+      "🌾 Ingredient Transparency Page: Each product listing includes a full millet-source disclosure, allergen info, and shelf-life details to build buyer confidence."
+    ],
+    "trustBadges": [
+      "🏡 100% Homemade & Small-Batch Crafted",
+      "🌿 No Preservatives | No Artificial Colours | No Maida",
+      "✅ Hygienically Packed & Sealed — FSSAI Registration In Progress"
+    ],
+    "policies": {
+      "pickupHours": {
+        "days": "Tuesday - Sunday",
+        "hours": "11:00 AM - 6:00 PM",
+        "note": "Safe Pickup Policy: Exact pickup address is shared privately only after order is confirmed and payment is received. Customers are requested to arrive within their chosen 30-minute slot to maintain privacy and reduce doorstep crowding. No unannounced visits. Monday reserved for baking and preparation."
+      }
+    },
+    "suggestedDomains": [
+      "radhamillet.in",
+      "radhabakes.shop"
+    ],
+    "publishedAt": "2026-11-18T17:47:01.097Z"
+  },
+  "sunita-homemade-millet-cookies-413": {
+    "business": "Sunita Homemade Millet Cookies",
+    "privacyShieldActive": false,
+    "privacyNote": "Privacy Shield is OFF. Full contact details retained as written: Phone 98765-43210, Flat 402 Kothrud Pune. Enable Privacy Shield to mask personal address and phone from public catalog.",
+    "tagline": "Wholesome Millets, Baked with Love — Straight from Sunita's Kitchen!",
+    "catalog": [
+      {
+        "item": "Ragi Choco Chip Cookies",
+        "quantity": "250g",
+        "price": "₹180",
+        "category": "Cookies"
+      },
+      {
+        "item": "Bajra Almond Biscuits",
+        "quantity": "250g",
+        "price": "₹200",
+        "category": "Biscuits"
+      },
+      {
+        "item": "Jowar Jeera Namkeen",
+        "quantity": "Standard",
+        "price": "₹120",
+        "category": "Namkeen & Snacks"
+      },
+      {
+        "item": "Festive Gift Box (Assorted)",
+        "quantity": "Assorted Pack",
+        "price": "₹450",
+        "category": "Gift Boxes"
+      }
+    ],
+    "trustBadges": [
+      "🌾 100% Natural Millet Ingredients — No Maida, No Preservatives",
+      "🏠 Homemade with Hygiene — Prepared in a Clean, Home Kitchen",
+      "🎁 Festive & Custom Gift Packing Available on Request"
+    ],
+    "policies": {
+      "pickupHours": {
+        "days": "Tuesday - Sunday",
+        "hours": "11:00 AM - 6:00 PM",
+        "note": "Pickup available at Flat 402, Kothrud, Pune. Please call 98765-43210 at least 1 day in advance to place your order. Fresh batches are made to order. Home delivery available within Kothrud area for orders above ₹300. Payment accepted via UPI or cash on pickup."
+      }
+    },
+    "suggestedDomains": [
+      "sunitamilletcookies.in",
+      "sunitamilletcookies.shop"
+    ],
+    "publishedAt": "2026-11-18T17:49:07.260Z"
+  }
+}
