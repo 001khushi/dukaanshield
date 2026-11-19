@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');
-const nodemailer = require('nodemailer');
 const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs');
 const path = require('path');
@@ -20,15 +19,7 @@ const STORES_FILE = path.join(__dirname, 'stores.json');
 if (!fs.existsSync(STORES_FILE)) {
   fs.writeFileSync(STORES_FILE, JSON.stringify({}));
 }
-const transporter = nodemailer.createTransport({
-      host: 'smtp.titan.email',
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.GODADDY_EMAIL || 'orders@dukaanshield.com',
-        pass: process.env.GODADDY_PASSWORD || 'KSdukaan001@',
-      },
-    });
+
 // Detect real image media type from file bytes (fixes renamed .webp/.png/.jpg files)
 function detectMediaType(buffer, fallbackMime) {
   if (buffer.length >= 12 && buffer.toString('ascii', 0, 4) === 'RIFF' && buffer.toString('ascii', 8, 12) === 'WEBP') {
@@ -175,45 +166,58 @@ app.get('/shop/:slug', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// 5. Mandatory Contact Form / Order Endpoint (Sends via GoDaddy SMTP)
+// 5. Mandatory Contact Form / Order Endpoint (Sends via Resend HTTPS API to orders@dukaanshield.com)
 app.post('/api/send-order', async (req, res) => {
-  const { customerName, customerPhone, orderDetails, storeName, targetEmail } = req.body;
+  const { customerName, customerPhone, customerEmail, orderDetails, storeName, targetEmail } = req.body;
+  const contactInfo = customerEmail || customerPhone || 'Not provided';
+  const recipientEmail = targetEmail || 'orders@dukaanshield.com';
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: 'smtpout.secureserver.net',
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.GODADDY_EMAIL || 'hello@yourdomain.com',
-        pass: process.env.GODADDY_PASSWORD || 'your_email_password',
-      },
-    });
+    if (!process.env.RESEND_API_KEY) {
+      return res.status(500).json({
+        success: false,
+        message: 'RESEND_API_KEY is not configured in environment variables.',
+      });
+    }
 
-    const mailOptions = {
-      from: `"DukaanShield Order Bot" <${process.env.GODADDY_EMAIL || 'hello@yourdomain.com'}>`,
-      to: targetEmail || process.env.GODADDY_EMAIL || 'hello@yourdomain.com',
-      subject: `🛍️ New Safe Order Inquiry for ${storeName || 'DukaanShield Store'} from ${customerName}`,
+    const emailPayload = {
+      from: 'DukaanShield Orders <orders@dukaanshield.com>',
+      to: [recipientEmail],
+      subject: `New Safe Order Inquiry for ${storeName || 'DukaanShield Store'} from ${customerName || 'Customer'}`,
       html: `
         <h3>New Customer Inquiry via DukaanShield</h3>
         <p><strong>Store:</strong> ${storeName || 'DukaanShield Storefront'}</p>
-        <p><strong>Customer Name:</strong> ${customerName}</p>
-        <p><strong>Contact Info:</strong> ${customerPhone}</p>
-        <p><strong>Order Details:</strong> ${orderDetails}</p>
+        <p><strong>Customer Name:</strong> ${customerName || 'N/A'}</p>
+        <p><strong>Contact Info:</strong> ${contactInfo}</p>
+        <p><strong>Order Details:</strong> ${orderDetails || 'N/A'}</p>
         <hr>
         <p style="color: #666; font-size: 12px;">Secured by DukaanShield & GoDaddy Domain Mailbox</p>
       `,
+      text: `New Customer Inquiry via DukaanShield\nStore: ${storeName || 'DukaanShield Storefront'}\nCustomer Name: ${customerName || 'N/A'}\nContact Info: ${contactInfo}\nOrder Details: ${orderDetails || 'N/A'}`,
     };
 
-    await transporter.sendMail(mailOptions);
-    res.json({ success: true, message: 'Order sent securely to the store owner’s GoDaddy mailbox!' });
-  } catch (error) {
-    console.error('SMTP Email Error:', error);
-    // If real credentials are set in .env, report the actual SMTP error so we can debug it
-    if (process.env.GODADDY_EMAIL && process.env.GODADDY_EMAIL !== 'hello@yourdomain.com') {
-      return res.status(500).json({ success: false, message: 'SMTP Delivery Failed: ' + error.message });
+    if (customerEmail && customerEmail.includes('@')) {
+      emailPayload.reply_to = customerEmail;
     }
-    res.json({ success: true, message: 'Order received and logged (GoDaddy SMTP dispatch simulated locally)!' });
+
+    const emailRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(emailPayload),
+    });
+
+    if (!emailRes.ok) {
+      const errData = await emailRes.text();
+      throw new Error(`Resend API Error (${emailRes.status}): ${errData}`);
+    }
+
+    res.json({ success: true, message: 'Order sent securely to orders@dukaanshield.com!' });
+  } catch (error) {
+    console.error('Resend Email Error:', error);
+    res.status(500).json({ success: false, message: 'Order Delivery Failed: ' + error.message });
   }
 });
 
